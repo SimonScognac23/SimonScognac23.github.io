@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- ═══════════════════════════════════════
+       SEO — TITOLO E META
+       noindex: dice a Google di NON indicizzare
+       questa pagina (non vogliamo che appaia
+       nei risultati di ricerca)
+  ═══════════════════════════════════════ -->
+  <title>Privacy Policy — Simone Scognamiglio | vivicoding</title>
+  <meta name="description" content="Informativa sulla privacy e trattamento dei dati personali di vivicoding — Simone Scognamiglio, sviluppatore web freelance a Roma."/>
+  <meta name="robots" content="noindex, follow"/>
+
+  <!-- ═══════════════════════════════════════
+       SICUREZZA — CONTENT SECURITY POLICY (CSP)
+       Più restrittiva dell'index.html perché
+       questa pagina non ha form né Web3Forms.
+       Blocca XSS da domini non autorizzati.
+       (OWASP A03 - Injection)
+  ═══════════════════════════════════════ -->
+  <meta http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self'
+        https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com
+        https://fonts.googleapis.com
+        https://fonts.gstatic.com;
+      style-src 'self' 'unsafe-inline'
+        https://cdn.jsdelivr.net
+        https://cdnjs.cloudflare.com
+        https://fonts.googleapis.com;
+      font-src 'self'
+        https://fonts.gstatic.com
+        https://cdnjs.cloudflare.com;
+      img-src 'self' data:;
+      script-src 'self'
+        https://cdn.jsdelivr.net;
+    "/>
+
+  <!-- ═══════════════════════════════════════
+       SICUREZZA — HEADERS AGGIUNTIVI
+       X-Content-Type-Options: blocca MIME sniffing
+       Referrer-Policy: limita info inviate ad altri siti
+       (OWASP A05 - Security Misconfiguration)
+  ═══════════════════════════════════════ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+
+  <!-- ═══════════════════════════════════════
+       PERFORMANCE — PRECONNECT
+       Prepara il browser alle connessioni esterne
+       in anticipo → pagina più veloce
+  ═══════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+
+  <!-- ═══════════════════════════════════════
+       CSS — LIBRERIE ESTERNE
+       Bootstrap: griglia e componenti
+       Font Awesome: icone
+       Google Fonts: caratteri tipografici
+  ═══════════════════════════════════════ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- ═══════════════════════════════════════
+       CSS — FOGLIO DI STILE PERSONALIZZATO
+  ═══════════════════════════════════════ -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- ═══════════════════════════════════════
+       CSS — STILI INLINE
+       Stili specifici solo per questa pagina
+  ═══════════════════════════════════════ -->
+  <style>
+    /* ── CONTENITORE PRINCIPALE ── */
+    .privacy-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 120px 1.5rem 80px;
+    }
+
+    /* ── TITOLO H1 ── */
+    .privacy-wrap h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: .5rem;
+    }
+
+    /* ── DATA ULTIMO AGGIORNAMENTO ── */
+    .privacy-wrap .last-update {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--accent);
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    /* ── TITOLI ARTICOLI (H2) ── */
+    .privacy-wrap h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin: 2.5rem 0 .75rem;
+    }
+
+    /* ── TESTO E LISTE ── */
+    .privacy-wrap p, .privacy-wrap li {
+      font-size: .95rem;
+      color: var(--text);
+      line-height: 1.85;
+    }
+    .privacy-wrap ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── LINK ── */
+    .privacy-wrap a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .privacy-wrap a:hover { text-decoration: underline; }
+
+    /* ── PULSANTE TORNA AL SITO ── */
+    .privacy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: var(--mono);
+      font-size: .75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color .2s;
+    }
+    .privacy-back:hover { color: var(--accent); }
+
+    /* ── BOX EMAIL IN FONDO ── */
+    .privacy-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem 2rem;
+      margin-top: 3rem;
+    }
+    .privacy-box p { margin: 0; font-size: .88rem; }
+  </style>
+
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     NAVBAR — BARRA DI NAVIGAZIONE
+     Solo il logo che riporta all'homepage
+═══════════════════════════════════════ -->
+<nav class="navbar fixed-top" role="navigation" aria-label="Menu principale">
+  <div class="container">
+    <a class="navbar-brand" href="index.html" aria-label="Torna all'homepage vivicoding">
+      vivi<span>coding</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     CONTENUTO PRINCIPALE — PRIVACY POLICY
+     Informativa completa GDPR con tutti
+     gli articoli obbligatori per legge italiana
+═══════════════════════════════════════ -->
+<main class="privacy-wrap">
+
+  <!-- Pulsante torna al sito -->
+  <a href="index.html" class="privacy-back">
+    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Torna al sito
+  </a>
+
+  <h1>Privacy Policy</h1>
+  <p class="last-update">Ultimo aggiornamento: Maggio 2026</p>
+
+  <p>La presente informativa descrive come <strong style="color:#fff">Simone Scognamiglio</strong> (di seguito "il Titolare") raccoglie, utilizza e protegge i dati personali degli utenti che visitano il sito web <strong style="color:#fff">vivicoding.it</strong>, in conformità al Regolamento UE 2016/679 (GDPR) e al D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018.</p>
+
+  <!-- ── Articolo 1 ── -->
+  <h2>1. Titolare del Trattamento</h2>
+  <p>
+    <strong style="color:#fff">Simone Scognamiglio</strong><br/>
+    Roma, 00168 (RM)<br/>
+    Email: <a href="mailto:scognac23@gmail.com">scognac23@gmail.com</a><br/>
+    Telefono: <a href="tel:+393403744753">+39 340 374 4753</a>
+  </p>
+
+  <!-- ── Articolo 2 ── -->
+  <h2>2. Dati Raccolti</h2>
+  <p>Il sito raccoglie le seguenti categorie di dati personali:</p>
+  <ul>
+    <li><strong style="color:#fff">Dati forniti volontariamente</strong> tramite il modulo di contatto: nome, indirizzo email, tipo di progetto e messaggio.</li>
+    <li><strong style="color:#fff">Dati di navigazione</strong>: indirizzo IP, tipo di browser, sistema operativo, pagine visitate e orario di accesso, raccolti automaticamente dai server.</li>
+    <li><strong style="color:#fff">Cookie tecnici</strong> di terze parti necessari al funzionamento del sito (Google Fonts, Bootstrap CDN, Font Awesome CDN).</li>
+  </ul>
+
+  <!-- ── Articolo 3 ── -->
+  <h2>3. Finalità del Trattamento</h2>
+  <p>I dati personali sono trattati per le seguenti finalità:</p>
+  <ul>
+    <li>Rispondere alle richieste di contatto inviate tramite il modulo</li>
+    <li>Valutare e gestire eventuali proposte di collaborazione professionale</li>
+    <li>Garantire il corretto funzionamento del sito web</li>
+  </ul>
+
+  <!-- ── Articolo 4 ── -->
+  <h2>4. Base Giuridica</h2>
+  <p>Il trattamento dei dati avviene sulla base del <strong style="color:#fff">consenso esplicito</strong> dell'utente (art. 6, lett. a GDPR), espresso tramite la spunta della casella nel modulo di contatto, e del <strong style="color:#fff">legittimo interesse</strong> del Titolare a rispondere alle richieste ricevute (art. 6, lett. f GDPR).</p>
+
+  <!-- ── Articolo 5 ── -->
+  <h2>5. Responsabile Esterno del Trattamento — Web3Forms</h2>
+  <p>Il modulo di contatto utilizza il servizio <strong style="color:#fff">Web3Forms</strong> (web3forms.com) per la ricezione e l'invio delle email. Web3Forms agisce come responsabile esterno del trattamento ai sensi dell'art. 28 GDPR. I dati inseriti nel form vengono trasmessi ai server di Web3Forms e successivamente inoltrati all'indirizzo email del Titolare. Per maggiori informazioni consulta la <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Web3Forms</a>.</p>
+
+  <!-- ── Articolo 6 ── -->
+  <h2>6. Conservazione dei Dati</h2>
+  <p>I dati personali forniti tramite il modulo di contatto sono conservati per il tempo strettamente necessario a evadere la richiesta e, in caso di instaurazione di un rapporto professionale, per la durata dello stesso e per il periodo previsto dagli obblighi di legge (massimo 10 anni). I dati non necessari vengono eliminati.</p>
+
+  <!-- ── Articolo 7 ── -->
+  <h2>7. Comunicazione e Diffusione</h2>
+  <p>I dati personali non sono ceduti, venduti né comunicati a terzi, ad eccezione di Web3Forms (vedi paragrafo 5) e degli eventuali obblighi di legge. I dati non sono trasferiti al di fuori dell'Unione Europea.</p>
+
+  <!-- ── Articolo 8 ── -->
+  <h2>8. Cookie</h2>
+  <p>Il sito utilizza esclusivamente <strong style="color:#fff">cookie tecnici di terze parti</strong> necessari al funzionamento (Google Fonts per i caratteri tipografici, Bootstrap e Font Awesome per le risorse grafiche). Non vengono utilizzati cookie di profilazione o marketing. L'utente può gestire o disabilitare i cookie tramite le impostazioni del proprio browser.</p>
+
+  <!-- ── Articolo 9 ── -->
+  <h2>9. Diritti dell'Interessato</h2>
+  <p>In qualità di interessato, hai il diritto di:</p>
+  <ul>
+    <li><strong style="color:#fff">Accesso</strong> — ottenere conferma del trattamento e copia dei dati (art. 15 GDPR)</li>
+    <li><strong style="color:#fff">Rettifica</strong> — correggere dati inesatti o incompleti (art. 16 GDPR)</li>
+    <li><strong style="color:#fff">Cancellazione</strong> — richiedere la cancellazione dei tuoi dati ("diritto all'oblio", art. 17 GDPR)</li>
+    <li><strong style="color:#fff">Limitazione</strong> — limitare il trattamento in determinate circostanze (art. 18 GDPR)</li>
+    <li><strong style="color:#fff">Portabilità</strong> — ricevere i dati in formato strutturato (art. 20 GDPR)</li>
+    <li><strong style="color:#fff">Opposizione</strong> — opporti al trattamento per legittimo interesse (art. 21 GDPR)</li>
+    <li><strong style="color:#fff">Revoca del consenso</strong> — in qualsiasi momento, senza pregiudicare la liceità del trattamento precedente</li>
+  </ul>
+  <p>Per esercitare i tuoi diritti scrivi a <a href="mailto:scognac23@gmail.com">scognac23@gmail.com</a>. Il Titolare risponderà entro 30 giorni.</p>
+
+  <!-- ── Articolo 10 ── -->
+  <h2>10. Reclamo all'Autorità di Controllo</h2>
+  <p>Hai il diritto di proporre reclamo al <strong style="color:#fff">Garante per la Protezione dei Dati Personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>), Piazza Venezia 11, 00187 Roma.</p>
+
+  <!-- ── Articolo 11 ── -->
+  <h2>11. Modifiche alla Privacy Policy</h2>
+  <p>Il Titolare si riserva il diritto di modificare la presente informativa in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con aggiornamento della data in cima al documento. Si consiglia di consultare periodicamente questa pagina.</p>
+
+  <!-- Box contatto finale -->
+  <div class="privacy-box">
+    <p>
+      <i class="fa-solid fa-envelope me-2" style="color:var(--accent)" aria-hidden="true"></i>
+      Per qualsiasi domanda relativa alla privacy scrivi a
+      <a href="mailto:scognac23@gmail.com">scognac23@gmail.com</a>
+    </p>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+     Solo copyright e link torna al sito
+═══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center text-md-start mb-2 mb-md-0">
+        <span class="footer-brand">vivi<span>coding</span></span>
+      </div>
+      <div class="col-md-4 text-center mb-2 mb-md-0">
+        <p class="footer-copy">© 2026 Simone Scognamiglio · Sviluppatore Web Freelance · Roma</p>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <!-- Icona casa: torna all'homepage -->
+        <a href="index.html" class="footer-social" aria-label="Torna al sito">
+          <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
