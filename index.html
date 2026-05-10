@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!-- ═══════════════════════════════════════
-       SEO — TITOLO E META DESCRIZIONE
-       Aiuta Google a capire di cosa parla il sito
+       SEO — TITOLO E META
+       noindex: dice a Google di NON indicizzare
+       questa pagina (non vogliamo che appaia
+       nei risultati di ricerca)
   ═══════════════════════════════════════ -->
-  <title>Simone Scognamiglio — Sviluppatore Web Freelance Roma | PHP Laravel Cyber Security</title>
-  <meta name="description" content="Simone Scognamiglio, sviluppatore web freelance a Roma. Realizzo siti vetrina, e-commerce e web app sicure con PHP, Laravel, JavaScript e Python. Certificato in Cyber Security. Preventivo gratuito."/>
-  <meta name="keywords" content="sviluppatore web Roma, freelance PHP Laravel, full stack developer Roma, siti web professionali Roma, e-commerce Roma, cyber security sviluppatore, Bootstrap, Python automazione, vivicoding"/>
-  <meta name="author" content="Simone Scognamiglio"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://vivicoding.it/"/>
-
-  <!-- ═══════════════════════════════════════
-       SEO — OPEN GRAPH
-       Controlla come appare il sito quando condiviso
-       su WhatsApp, LinkedIn, Facebook
-  ═══════════════════════════════════════ -->
-  <meta property="og:title" content="Simone Scognamiglio — Sviluppatore Web Freelance Roma"/>
-  <meta property="og:description" content="Siti web, e-commerce e web app sicure. Sviluppatore freelance a Roma con certificazione Cyber Security. Preventivo gratuito entro 24h."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://vivicoding.it/"/>
-  <meta property="og:image" content="https://vivicoding.it/img/vivi_coding.png"/>
-  <meta property="og:locale" content="it_IT"/>
-  <meta property="og:site_name" content="vivicoding — Simone Scognamiglio"/>
-
-  <!-- ═══════════════════════════════════════
-       SEO — TWITTER CARD
-       Controlla come appare il sito quando
-       condiviso su Twitter/X
-  ═══════════════════════════════════════ -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Simone Scognamiglio — Sviluppatore Web Freelance Roma"/>
-  <meta name="twitter:description" content="Siti web, e-commerce e web app sicure. Sviluppatore freelance a Roma con certificazione Cyber Security."/>
-  <meta name="twitter:image" content="https://vivicoding.it/img/vivi_coding.png"/>
+  <title>Privacy Policy — Simone Scognamiglio | vivicoding</title>
+  <meta name="description" content="Informativa sulla privacy e trattamento dei dati personali di vivicoding — Simone Scognamiglio, sviluppatore web freelance a Roma."/>
+  <meta name="robots" content="noindex, follow"/>
 
   <!-- ═══════════════════════════════════════
        SICUREZZA — CONTENT SECURITY POLICY (CSP)
-       Protezione XSS: dice al browser quali domini
-       sono fidati. Blocca script iniettati da terzi.
+       Più restrittiva dell'index.html perché
+       questa pagina non ha form né Web3Forms.
+       Blocca XSS da domini non autorizzati.
        (OWASP A03 - Injection)
   ═══════════════════════════════════════ -->
   <meta http-equiv="Content-Security-Policy"
@@ -50,10 +27,7 @@
         https://cdn.jsdelivr.net
         https://cdnjs.cloudflare.com
         https://fonts.googleapis.com
-        https://fonts.gstatic.com
-        https://api.web3forms.com;
-      script-src 'self' 'unsafe-inline'
-        https://cdn.jsdelivr.net;
+        https://fonts.gstatic.com;
       style-src 'self' 'unsafe-inline'
         https://cdn.jsdelivr.net
         https://cdnjs.cloudflare.com
@@ -61,8 +35,9 @@
       font-src 'self'
         https://fonts.gstatic.com
         https://cdnjs.cloudflare.com;
-      img-src 'self' data: https:;
-      form-action https://api.web3forms.com;
+      img-src 'self' data:;
+      script-src 'self'
+        https://cdn.jsdelivr.net;
     "/>
 
   <!-- ═══════════════════════════════════════
@@ -75,51 +50,30 @@
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
 
   <!-- ═══════════════════════════════════════
-       SEO — SCHEMA.ORG
-       Dati strutturati: Google capisce esattamente
-       chi sei e ti mostra meglio nei risultati
+       SICUREZZA — X-FRAME-OPTIONS
+       Blocca il caricamento del sito in iframe
+       da altri domini → protezione Clickjacking
+       (OWASP A05 - Security Misconfiguration)
   ═══════════════════════════════════════ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Simone Scognamiglio",
-    "jobTitle": "Full Stack Developer & Cyber Security Specialist",
-    "description": "Sviluppatore web freelance a Roma specializzato in PHP, Laravel, JavaScript e Cyber Security.",
-    "url": "https://vivicoding.it",
-    "image": "https://vivicoding.it/img/vivi_coding.png",
-    "email": "scognac23@gmail.com",
-    "telephone": "+393403744753",
-    "address": { "@type": "PostalAddress", "addressLocality": "Roma", "addressCountry": "IT" },
-    "sameAs": [
-      "https://github.com/SimonScognac23",
-      "https://linkedin.com/in/simonescognamiglio-7758172a0",
-      "https://www.instagram.com/vivi_coding",
-      "https://www.tiktok.com/@scognac"
-    ],
-    "knowsAbout": ["PHP","Laravel","JavaScript","Python","Cyber Security","Web Development","E-Commerce"]
-  }
-  </script>
+  <meta http-equiv="X-Frame-Options" content="DENY"/>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "vivicoding — Simone Scognamiglio",
-    "description": "Sviluppo siti web, e-commerce e web app sicure a Roma.",
-    "url": "https://vivicoding.it",
-    "telephone": "+393403744753",
-    "email": "scognac23@gmail.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Roma", "addressRegion": "Lazio", "addressCountry": "IT" },
-    "areaServed": "Roma",
-    "priceRange": "€€"
-  }
-  </script>
+  <!-- ═══════════════════════════════════════
+       SICUREZZA — PERMISSIONS POLICY
+       Disabilita esplicitamente le API del browser
+       che questo sito non utilizza:
+       fotocamera, microfono, geolocalizzazione,
+       pagamenti, USB, autoplay forzato.
+       Riduce la superficie di attacco in caso
+       di script malevoli iniettati.
+       (OWASP A05 - Security Misconfiguration)
+  ═══════════════════════════════════════ -->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), autoplay=()"/>
 
   <!-- ═══════════════════════════════════════
        PERFORMANCE — PRECONNECT
-       Dice al browser di prepararsi in anticipo
-       alle connessioni esterne → sito più veloce
+       Prepara il browser alle connessioni esterne
+       in anticipo → pagina più veloce
   ═══════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -130,9 +84,28 @@
        Bootstrap: griglia e componenti
        Font Awesome: icone
        Google Fonts: caratteri tipografici
+
+       SICUREZZA — SUBRESOURCE INTEGRITY (SRI)
+       integrity: hash SHA-384 della risorsa.
+       Il browser confronta il file scaricato con
+       l'hash dichiarato → se il CDN è compromesso
+       o il file è stato manomesso, il browser
+       blocca il caricamento automaticamente.
+       crossorigin: necessario per il controllo SRI
+       su risorse cross-origin.
+       (OWASP A08 - Software and Data Integrity)
   ═══════════════════════════════════════ -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"/>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plh7eqjm+/zShrSy8MuSRQPFCNGxA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 
   <!-- ═══════════════════════════════════════
@@ -142,499 +115,203 @@
 
   <!-- ═══════════════════════════════════════
        CSS — STILI INLINE
-       Cookie banner e checkbox privacy
+       Stili specifici solo per questa pagina
   ═══════════════════════════════════════ -->
   <style>
-    /* ── COOKIE BANNER ── */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: #0d1117;
-      border-top: 1px solid #1e2d3d;
-      padding: 1.2rem 1.5rem;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+    /* ── CONTENITORE PRINCIPALE ── */
+    .privacy-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 120px 1.5rem 80px;
     }
-    #cookie-banner p {
-      margin: 0;
-      font-size: .82rem;
-      color: #6e7f8d;
-      line-height: 1.6;
-      flex: 1;
-      min-width: 200px;
-    }
-    #cookie-banner a { color: #00e5ff; text-decoration: none; }
-    #cookie-banner a:hover { text-decoration: underline; }
-    .cookie-btns { display: flex; gap: .75rem; flex-shrink: 0; }
-    .cookie-accept {
-      background: #00e5ff;
-      color: #080c10;
-      border: none;
-      border-radius: 3px;
-      font-family: 'Space Mono', monospace;
-      font-size: .72rem;
-      font-weight: 700;
-      padding: .55rem 1.2rem;
-      cursor: pointer;
-      letter-spacing: .05em;
-      transition: background .2s;
-    }
-    .cookie-accept:hover { background: #00c8e0; }
-    .cookie-decline {
-      background: transparent;
-      color: #6e7f8d;
-      border: 1px solid #1e2d3d;
-      border-radius: 3px;
-      font-family: 'Space Mono', monospace;
-      font-size: .72rem;
-      padding: .55rem 1.2rem;
-      cursor: pointer;
-      transition: color .2s, border-color .2s;
-    }
-    .cookie-decline:hover { color: #fff; border-color: #6e7f8d; }
 
-    /* ── CHECKBOX PRIVACY FORM ── */
-    .privacy-check-wrap {
-      display: flex;
-      align-items: flex-start;
-      gap: .6rem;
-      margin-bottom: 1.2rem;
+    /* ── TITOLO H1 ── */
+    .privacy-wrap h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: .5rem;
     }
-    .privacy-check-wrap input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      min-width: 16px;
-      margin-top: 3px;
-      accent-color: #00e5ff;
-      cursor: pointer;
-    }
-    .privacy-check-wrap label {
-      font-family: 'Space Mono', monospace;
+
+    /* ── DATA ULTIMO AGGIORNAMENTO ── */
+    .privacy-wrap .last-update {
+      font-family: var(--mono);
       font-size: .72rem;
-      color: #6e7f8d;
-      line-height: 1.6;
-      cursor: pointer;
+      color: var(--accent);
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
     }
-    .privacy-check-wrap label a { color: #00e5ff; text-decoration: none; }
-    .privacy-check-wrap label a:hover { text-decoration: underline; }
+
+    /* ── TITOLI ARTICOLI (H2) ── */
+    .privacy-wrap h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin: 2.5rem 0 .75rem;
+    }
+
+    /* ── TESTO E LISTE ── */
+    .privacy-wrap p, .privacy-wrap li {
+      font-size: .95rem;
+      color: var(--text);
+      line-height: 1.85;
+    }
+    .privacy-wrap ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── LINK ── */
+    .privacy-wrap a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .privacy-wrap a:hover { text-decoration: underline; }
+
+    /* ── PULSANTE TORNA AL SITO ── */
+    .privacy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-family: var(--mono);
+      font-size: .75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color .2s;
+    }
+    .privacy-back:hover { color: var(--accent); }
+
+    /* ── BOX EMAIL IN FONDO ── */
+    .privacy-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem 2rem;
+      margin-top: 3rem;
+    }
+    .privacy-box p { margin: 0; font-size: .88rem; }
   </style>
 
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════
-     GDPR — COOKIE BANNER
-     Obbligatorio per legge italiana (D.Lgs 196/2003)
-     Si nasconde dopo il consenso e non riappare
-═══════════════════════════════════════ -->
-<div id="cookie-banner" role="dialog" aria-label="Consenso cookie">
-  <p>
-    <i class="fa-solid fa-cookie-bite me-2" style="color:#00e5ff"></i>
-    Questo sito utilizza cookie tecnici di terze parti (Google Fonts, Bootstrap, Font Awesome)
-    necessari al suo funzionamento. Non utilizziamo cookie di profilazione o marketing.
-    Leggi la <a href="privacy.html">Privacy Policy</a> per saperne di più.
-  </p>
-  <div class="cookie-btns">
-    <button class="cookie-decline" id="cookie-decline">Solo necessari</button>
-    <button class="cookie-accept" id="cookie-accept">Accetto</button>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
      NAVBAR — BARRA DI NAVIGAZIONE
-     fixed-top = rimane in cima durante lo scroll
+     Solo il logo che riporta all'homepage
 ═══════════════════════════════════════ -->
 <nav class="navbar fixed-top" role="navigation" aria-label="Menu principale">
   <div class="container">
-    <a class="navbar-brand" href="#" aria-label="vivicoding homepage">vivi<span>coding</span></a>
-    <ul class="navbar-nav flex-row">
-      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-      <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
-      <li class="nav-item"><a class="nav-link" href="#education">Certificazioni</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Contatti</a></li>
-    </ul>
+    <a class="navbar-brand" href="index.html" aria-label="Torna all'homepage vivicoding">
+      vivi<span>coding</span>
+    </a>
   </div>
 </nav>
 
 <!-- ═══════════════════════════════════════
-     HERO — SEZIONE PRINCIPALE
-     Prima cosa che vede il visitatore
-     Sfondo bianco con logo a destra e testo a sinistra
+     CONTENUTO PRINCIPALE — PRIVACY POLICY
+     Informativa completa GDPR con tutti
+     gli articoli obbligatori per legge italiana
 ═══════════════════════════════════════ -->
-<section id="hero" aria-label="Presentazione">
-  <img src="img/vivi_coding.png" class="hero-bg-img"
-    alt="vivicoding logo — Simone Scognamiglio sviluppatore web Roma"
-    width="580" height="580" loading="eager"/>
-  <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <div class="row align-items-center min-vh-100">
-      <div class="col-lg-7 col-md-9">
-        <p class="hero-greeting">Ciao, sono</p>
-        <h1 class="hero-name">Simone<br/><span>Scognamiglio</span></h1>
-        <!-- Typewriter: il testo che cambia automaticamente -->
-        <p class="hero-role" id="typed-text"></p>
-        <p class="hero-desc">Sviluppatore web freelance a <strong>Roma</strong> — realizzo siti, e-commerce e web app che lavorano per te, anche mentre dormi.</p>
-        <div class="d-flex gap-3 flex-wrap mb-4">
-          <a href="#contact" class="btn-accent">Parliamo del tuo progetto</a>
-          <a href="#servizi" class="btn-ghost-hero">Scopri i servizi</a>
-        </div>
-        <!-- Social links — rel="noopener noreferrer" protegge da tabnapping -->
-        <div class="hero-socials" aria-label="Social network">
-          <a href="https://github.com/SimonScognac23" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://linkedin.com/in/simonescognamiglio-7758172a0" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/vivi_coding" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@scognac" target="_blank" rel="noopener noreferrer" title="TikTok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-      </div>
-    </div>
+<main class="privacy-wrap">
+
+  <!-- Pulsante torna al sito -->
+  <a href="index.html" class="privacy-back">
+    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Torna al sito
+  </a>
+
+  <h1>Privacy Policy</h1>
+  <p class="last-update">Ultimo aggiornamento: Maggio 2026</p>
+
+  <p>La presente informativa descrive come <strong style="color:#fff">Simone Scognamiglio</strong> (di seguito "il Titolare") raccoglie, utilizza e protegge i dati personali degli utenti che visitano il sito web <strong style="color:#fff">vivicoding.it</strong>, in conformità al Regolamento UE 2016/679 (GDPR) e al D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018.</p>
+
+  <!-- ── Articolo 1 ── -->
+  <h2>1. Titolare del Trattamento</h2>
+  <p>
+    <strong style="color:#fff">Simone Scognamiglio</strong><br/>
+    Roma, 00168 (RM)<br/>
+    Email: <a href="mailto:scognac23@gmail.com">scognac23@gmail.com</a><br/>
+    Telefono: <a href="tel:+393403744753">+39 340 374 4753</a>
+  </p>
+
+  <!-- ── Articolo 2 ── -->
+  <h2>2. Dati Raccolti</h2>
+  <p>Il sito raccoglie le seguenti categorie di dati personali:</p>
+  <ul>
+    <li><strong style="color:#fff">Dati forniti volontariamente</strong> tramite il modulo di contatto: nome, indirizzo email, tipo di progetto e messaggio.</li>
+    <li><strong style="color:#fff">Dati di navigazione</strong>: indirizzo IP, tipo di browser, sistema operativo, pagine visitate e orario di accesso, raccolti automaticamente dai server.</li>
+    <li><strong style="color:#fff">Cookie tecnici</strong> di terze parti necessari al funzionamento del sito (Google Fonts, Bootstrap CDN, Font Awesome CDN).</li>
+  </ul>
+
+  <!-- ── Articolo 3 ── -->
+  <h2>3. Finalità del Trattamento</h2>
+  <p>I dati personali sono trattati per le seguenti finalità:</p>
+  <ul>
+    <li>Rispondere alle richieste di contatto inviate tramite il modulo</li>
+    <li>Valutare e gestire eventuali proposte di collaborazione professionale</li>
+    <li>Garantire il corretto funzionamento del sito web</li>
+  </ul>
+
+  <!-- ── Articolo 4 ── -->
+  <h2>4. Base Giuridica</h2>
+  <p>Il trattamento dei dati avviene sulla base del <strong style="color:#fff">consenso esplicito</strong> dell'utente (art. 6, lett. a GDPR), espresso tramite la spunta della casella nel modulo di contatto, e del <strong style="color:#fff">legittimo interesse</strong> del Titolare a rispondere alle richieste ricevute (art. 6, lett. f GDPR).</p>
+
+  <!-- ── Articolo 5 ── -->
+  <h2>5. Responsabile Esterno del Trattamento — Web3Forms</h2>
+  <p>Il modulo di contatto utilizza il servizio <strong style="color:#fff">Web3Forms</strong> (web3forms.com) per la ricezione e l'invio delle email. Web3Forms agisce come responsabile esterno del trattamento ai sensi dell'art. 28 GDPR. I dati inseriti nel form vengono trasmessi ai server di Web3Forms e successivamente inoltrati all'indirizzo email del Titolare. Per maggiori informazioni consulta la <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Web3Forms</a>.</p>
+
+  <!-- ── Articolo 6 ── -->
+  <h2>6. Conservazione dei Dati</h2>
+  <p>I dati personali forniti tramite il modulo di contatto sono conservati per il tempo strettamente necessario a evadere la richiesta e, in caso di instaurazione di un rapporto professionale, per la durata dello stesso e per il periodo previsto dagli obblighi di legge (massimo 10 anni). I dati non necessari vengono eliminati.</p>
+
+  <!-- ── Articolo 7 ── -->
+  <h2>7. Comunicazione e Diffusione</h2>
+  <p>I dati personali non sono ceduti, venduti né comunicati a terzi, ad eccezione di Web3Forms (vedi paragrafo 5) e degli eventuali obblighi di legge. I dati non sono trasferiti al di fuori dell'Unione Europea.</p>
+
+  <!-- ── Articolo 8 ── -->
+  <h2>8. Cookie</h2>
+  <p>Il sito utilizza esclusivamente <strong style="color:#fff">cookie tecnici di terze parti</strong> necessari al funzionamento (Google Fonts per i caratteri tipografici, Bootstrap e Font Awesome per le risorse grafiche). Non vengono utilizzati cookie di profilazione o marketing. L'utente può gestire o disabilitare i cookie tramite le impostazioni del proprio browser.</p>
+
+  <!-- ── Articolo 9 ── -->
+  <h2>9. Diritti dell'Interessato</h2>
+  <p>In qualità di interessato, hai il diritto di:</p>
+  <ul>
+    <li><strong style="color:#fff">Accesso</strong> — ottenere conferma del trattamento e copia dei dati (art. 15 GDPR)</li>
+    <li><strong style="color:#fff">Rettifica</strong> — correggere dati inesatti o incompleti (art. 16 GDPR)</li>
+    <li><strong style="color:#fff">Cancellazione</strong> — richiedere la cancellazione dei tuoi dati ("diritto all'oblio", art. 17 GDPR)</li>
+    <li><strong style="color:#fff">Limitazione</strong> — limitare il trattamento in determinate circostanze (art. 18 GDPR)</li>
+    <li><strong style="color:#fff">Portabilità</strong> — ricevere i dati in formato strutturato (art. 20 GDPR)</li>
+    <li><strong style="color:#fff">Opposizione</strong> — opporti al trattamento per legittimo interesse (art. 21 GDPR)</li>
+    <li><strong style="color:#fff">Revoca del consenso</strong> — in qualsiasi momento, senza pregiudicare la liceità del trattamento precedente</li>
+  </ul>
+  <p>Per esercitare i tuoi diritti scrivi a <a href="mailto:scognac23@gmail.com">scognac23@gmail.com</a>. Il Titolare risponderà entro 30 giorni.</p>
+
+  <!-- ── Articolo 10 ── -->
+  <h2>10. Reclamo all'Autorità di Controllo</h2>
+  <p>Hai il diritto di proporre reclamo al <strong style="color:#fff">Garante per la Protezione dei Dati Personali</strong> (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>), Piazza Venezia 11, 00187 Roma.</p>
+
+  <!-- ── Articolo 11 ── -->
+  <h2>11. Modifiche alla Privacy Policy</h2>
+  <p>Il Titolare si riserva il diritto di modificare la presente informativa in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con aggiornamento della data in cima al documento. Si consiglia di consultare periodicamente questa pagina.</p>
+
+  <!-- Box contatto finale -->
+  <div class="privacy-box">
+    <p>
+      <i class="fa-solid fa-envelope me-2" style="color:var(--accent)" aria-hidden="true"></i>
+      Per qualsiasi domanda relativa alla privacy scrivi a
+      <a href="mailto:scognac23@gmail.com">scognac23@gmail.com</a>
+    </p>
   </div>
-</section>
 
-<!-- ═══════════════════════════════════════
-     ABOUT — 01
-     Presentazione personale e statistiche
-═══════════════════════════════════════ -->
-<section id="about" aria-labelledby="about-title">
-  <div class="container">
-    <p class="sec-label">// 01. about</p>
-    <h2 class="sec-title" id="about-title">Chi <span>sono</span></h2>
-    <div class="row g-4 align-items-stretch">
-
-      <!-- Testo presentazione -->
-      <div class="col-lg-8 fade-up">
-        <div class="about-card h-100">
-          <p class="about-text mb-3">
-            Sono <strong style="color:#fff">Simone Scognamiglio</strong>, sviluppatore web freelance con sede a Roma. Mi occupo di trasformare idee e obiettivi di business in prodotti digitali <strong style="color:var(--accent)">concreti, veloci e sicuri</strong> — dal primo wireframe fino al lancio online.
-          </p>
-          <p class="about-text mb-3">
-            Ho una formazione completa sia frontend che backend: lavoro con <strong style="color:#fff">HTML, CSS, Bootstrap, JavaScript, PHP e Laravel</strong> per costruire interfacce moderne e sistemi solidi. In più, ho conseguito una specializzazione in <strong style="color:var(--accent)">Cyber Security</strong> — questo significa che ogni progetto che realizzo nasce già protetto, senza bisogno di interventi successivi.
-          </p>
-          <p class="about-text">
-            Lavoro in modo trasparente, rispetto le scadenze e comunico in modo chiaro durante tutto il progetto. Non sparisco dopo la consegna. <strong style="color:#fff">Se vuoi un professionista affidabile con cui costruire qualcosa che duri</strong>, sono la persona giusta.
-          </p>
-        </div>
-      </div>
-
-      <!-- Statistiche numeriche -->
-      <div class="col-lg-4 fade-up">
-        <div class="row g-3 h-100">
-          <div class="col-6"><div class="stat-card"><div class="stat-num" style="color:var(--accent)">2+</div><div class="stat-lbl">Anni di<br/>formazione</div></div></div>
-          <div class="col-6"><div class="stat-card"><div class="stat-num" style="color:var(--accent2)">3</div><div class="stat-lbl">Certificazioni<br/>ottenute</div></div></div>
-          <div class="col-6"><div class="stat-card"><div class="stat-num" style="color:var(--accent)">6</div><div class="stat-lbl">Servizi<br/>offerti</div></div></div>
-          <div class="col-6"><div class="stat-card"><div class="stat-num" style="color:var(--accent2)">100%</div><div class="stat-lbl">Secure<br/>Coding</div></div></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SKILLS — 02
-     Competenze tecniche divise per categoria
-═══════════════════════════════════════ -->
-<section id="skills" aria-labelledby="skills-title">
-  <div class="container">
-    <p class="sec-label">// 02. skills</p>
-    <h2 class="sec-title" id="skills-title">Competenze <span>tecniche</span></h2>
-    <div class="row g-4">
-
-      <!-- Front-End -->
-      <div class="col-md-6 col-lg-3 fade-up">
-        <div class="skill-category h-100">
-          <div class="skill-icon"><i class="fa-solid fa-table-columns" aria-hidden="true"></i></div>
-          <h3>Front-End</h3>
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">DOM Manipulation</span>
-          <span class="skill-tag">Responsive Design</span>
-        </div>
-      </div>
-
-      <!-- Back-End -->
-      <div class="col-md-6 col-lg-3 fade-up">
-        <div class="skill-category h-100">
-          <div class="skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
-          <h3>Back-End</h3>
-          <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Laravel</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">REST API</span>
-          <span class="skill-tag">Automazione</span>
-        </div>
-      </div>
-
-      <!-- Cyber Security -->
-      <div class="col-md-6 col-lg-3 fade-up">
-        <div class="skill-category h-100">
-          <div class="skill-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-          <h3>Cyber Security</h3>
-          <span class="skill-tag purple">Secure Coding</span>
-          <span class="skill-tag purple">API Security</span>
-          <span class="skill-tag purple">DevSecOps</span>
-          <span class="skill-tag purple">Cloud Security</span>
-          <span class="skill-tag purple">Sec Testing</span>
-        </div>
-      </div>
-
-      <!-- Database & Tools -->
-      <div class="col-md-6 col-lg-3 fade-up">
-        <div class="skill-category h-100">
-          <div class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
-          <h3>Database & Tools</h3>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">Query Optimization</span>
-          <span class="skill-tag">Git / GitHub</span>
-          <span class="skill-tag">Agile</span>
-          <span class="skill-tag">Problem Solving</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     SERVIZI — 03
-     I 6 servizi offerti ai clienti
-═══════════════════════════════════════ -->
-<section id="servizi" aria-labelledby="servizi-title">
-  <div class="container">
-    <p class="sec-label">// 03. servizi</p>
-    <h2 class="sec-title" id="servizi-title">Cosa posso <span>fare per te</span></h2>
-    <div class="row g-4">
-
-      <!-- Sito Vetrina -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="service-card h-100">
-          <div class="service-icon-wrap" style="--clr:var(--accent)"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
-          <h3 class="service-title">Sito Vetrina</h3>
-          <p class="service-body">La tua attività merita una presenza online che ispiri fiducia al primo sguardo. Realizzo siti vetrina moderni, veloci e ottimizzati per Google.</p>
-          <span class="service-tag">Il più richiesto</span>
-        </div>
-      </div>
-
-      <!-- E-Commerce -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="service-card h-100">
-          <div class="service-icon-wrap" style="--clr:var(--accent2)"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
-          <h3 class="service-title">E-Commerce</h3>
-          <p class="service-body">Vuoi vendere online senza dipendere da marketplace come Amazon o Etsy? Ti costruisco un negozio tutto tuo: catalogo, carrello, pagamenti e gestione ordini. Aperto 24 ore su 24, 7 giorni su 7.</p>
-        </div>
-      </div>
-
-      <!-- Restyling -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="service-card h-100">
-          <div class="service-icon-wrap" style="--clr:#f59e0b"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></div>
-          <h3 class="service-title">Restyling Sito Esistente</h3>
-          <p class="service-body">Un sito lento o datato allontana i clienti prima ancora che leggano chi sei. Lo rinnovo da zero: design moderno, velocità migliorata, compatibilità mobile e posizionamento su Google potenziato.</p>
-        </div>
-      </div>
-
-      <!-- Landing Page -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="service-card h-100">
-          <div class="service-icon-wrap" style="--clr:var(--accent)"><i class="fa-solid fa-window-maximize" aria-hidden="true"></i></div>
-          <h3 class="service-title">Landing Page</h3>
-          <p class="service-body">Una pagina focalizzata, senza distrazioni, costruita per un unico obiettivo: convertire i visitatori in clienti, iscritti o contatti. Ideale per campagne pubblicitarie, lanci di prodotto ed eventi.</p>
-        </div>
-      </div>
-
-      <!-- Automazione -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="service-card h-100">
-          <div class="service-icon-wrap" style="--clr:var(--accent2)"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
-          <h3 class="service-title">Automazione & Risparmio di Tempo</h3>
-          <p class="service-body">Ogni ora che perdi su attività ripetitive è un'ora sottratta al tuo business. Con Python automatizzo processi come invio di email, generazione di report e raccolta dati — così tu ti concentri su ciò che conta davvero.</p>
-        </div>
-      </div>
-
-      <!-- Sito Sicuro -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="service-card h-100">
-          <div class="service-icon-wrap" style="--clr:#10b981"><i class="fa-solid fa-shield" aria-hidden="true"></i></div>
-          <h3 class="service-title">Sito Sicuro & Affidabile</h3>
-          <p class="service-body">La maggior parte dei siti viene hackerata per vulnerabilità evitabili. Grazie alla mia certificazione in Cyber Security, ogni progetto che realizzo è protetto fin dalla prima riga di codice. Nessun costo aggiuntivo, nessuna sorpresa.</p>
-          <span class="service-tag" style="color:#10b981;border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.08)">Vantaggio esclusivo</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     EDUCATION — 04
-     Certificazioni e formazione
-═══════════════════════════════════════ -->
-<section id="education" aria-labelledby="education-title">
-  <div class="container">
-    <p class="sec-label">// 04. formazione</p>
-    <h2 class="sec-title" id="education-title">Istruzione & <span>Certificazioni</span></h2>
-    <div class="row g-4 justify-content-center">
-
-      <!-- Certificazione Cyber Security -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="cert-card h-100">
-          <div class="cert-icon" style="color:var(--accent)"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
-          <div class="cert-badge-eqf">EQF 6</div>
-          <h3 class="cert-title">Specializzazione Cyber Security</h3>
-          <p class="cert-school"><i class="fa-solid fa-building me-1" aria-hidden="true"></i>Aulab Hackademy</p>
-          <p class="cert-body">Corso avanzato su principi di Cyber Security applicati allo sviluppo web: Secure Coding, protezione delle API, metodologie DevSecOps, Security Testing e Cloud Security. Livello universitario EQF 6.</p>
-          <a href="https://credential.net/c70fb460-e360-40ac-95a9-8bb528a66309" target="_blank" rel="noopener noreferrer" class="cert-link">
-            <i class="fa-solid fa-award me-1" aria-hidden="true"></i>Verifica certificato
-          </a>
-        </div>
-      </div>
-
-      <!-- Certificazione Full Stack -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="cert-card h-100">
-          <div class="cert-icon" style="color:var(--accent2)"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-          <div class="cert-badge-eqf" style="color:var(--accent2);border-color:rgba(123,47,255,.3);background:rgba(123,47,255,.1)">EQF 6</div>
-          <h3 class="cert-title">Full Stack Developer</h3>
-          <p class="cert-school"><i class="fa-solid fa-building me-1" aria-hidden="true"></i>Aulab Hackademy</p>
-          <p class="cert-body">Percorso intensivo e pratico sullo sviluppo web completo: HTML, CSS, JavaScript, PHP, framework Laravel e Metodologie Agili. Progetti reali, approccio professionale fin dal primo giorno. Livello universitario EQF 6.</p>
-          <a href="https://credential.net/d90387ce-b165-43b2-81d8-e3498085ef3e" target="_blank" rel="noopener noreferrer" class="cert-link" style="color:var(--accent2);border-color:rgba(123,47,255,.3);background:rgba(123,47,255,.07)">
-            <i class="fa-solid fa-award me-1" aria-hidden="true"></i>Verifica certificato
-          </a>
-        </div>
-      </div>
-
-      <!-- Certificazione Python -->
-      <div class="col-12 col-md-6 col-lg-4 fade-up">
-        <div class="cert-card h-100">
-          <div class="cert-icon" style="color:#f59e0b"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
-          <h3 class="cert-title">Python Pro</h3>
-          <p class="cert-school"><i class="fa-solid fa-building me-1" aria-hidden="true"></i>Udemy</p>
-          <p class="cert-body">Approfondimento avanzato di Python applicato allo sviluppo web, alla scrittura di script e all'automazione di processi aziendali. Dal codice di base alle soluzioni pronte per la produzione.</p>
-          <a href="https://udemy.com/certificate/UC-797e93fd-c6c7-4f3e-8647-079aa7193a82" target="_blank" rel="noopener noreferrer" class="cert-link" style="color:#f59e0b;border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)">
-            <i class="fa-solid fa-award me-1" aria-hidden="true"></i>Verifica certificato
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     CONTACT — 05
-     Form di contatto + informazioni
-     Protezioni attive:
-     - Web3Forms (rate limiting integrato)
-     - botcheck honeypot (blocca bot)
-     - maxlength (limita input XSS)
-     - checkbox privacy obbligatoria (GDPR)
-     - method POST (protegge da CSRF)
-═══════════════════════════════════════ -->
-<section id="contact" aria-labelledby="contact-title">
-  <div class="container">
-    <p class="sec-label">// 05. contatti</p>
-    <h2 class="sec-title" id="contact-title">Parliamo <span>insieme</span></h2>
-    <div class="row g-4 justify-content-center">
-
-      <!-- Informazioni di contatto -->
-      <div class="col-lg-4 fade-up">
-        <div class="contact-info-card h-100">
-          <h3 class="contact-info-title">Raccontami il tuo progetto</h3>
-          <p class="contact-info-text">Che tu abbia un'idea chiara o ancora solo un'intuizione, scrivimi. Rispondo entro 24 ore con una valutazione onesta e senza impegno. Il primo confronto è sempre gratuito.</p>
-          <div class="contact-info-list">
-            <a href="mailto:scognac23@gmail.com" class="contact-info-item">
-              <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>scognac23@gmail.com</span>
-            </a>
-            <a href="tel:+393403744753" class="contact-info-item">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i><span>+39 340 374 4753</span>
-            </a>
-            <a href="https://linkedin.com/in/simonescognamiglio-7758172a0" target="_blank" rel="noopener noreferrer" class="contact-info-item">
-              <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
-            </a>
-            <div class="contact-info-item">
-              <i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Roma, Italia</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Form di contatto -->
-      <div class="col-lg-7 fade-up">
-        <div class="contact-form-card">
-          <form action="https://api.web3forms.com/submit" method="POST" aria-label="Form di contatto">
-
-            <!-- Web3Forms: chiave accesso -->
-            <input type="hidden" name="access_key" value="8caca050-ec0e-433a-b0a5-a7bb475c0125"/>
-            <!-- Web3Forms: oggetto email ricevuta -->
-            <input type="hidden" name="subject" value="Nuovo messaggio da vivicoding"/>
-            <!-- Sicurezza: honeypot anti-bot (invisibile all'utente) -->
-            <input type="checkbox" name="botcheck" style="display:none" aria-hidden="true"/>
-
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <label class="form-label-custom" for="nome">Nome</label>
-                <!-- maxlength: limita input, protezione XSS (OWASP A03) -->
-                <input type="text" id="nome" name="nome" class="form-input"
-                  placeholder="Il tuo nome" required maxlength="100"/>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label-custom" for="email">Email</label>
-                <input type="email" id="email" name="email" class="form-input"
-                  placeholder="La tua email" required maxlength="150"/>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label-custom" for="progetto">Tipo di progetto</label>
-              <select id="progetto" name="progetto" class="form-input">
-                <option value="" style="background:#111820">Seleziona un servizio...</option>
-                <option value="vetrina" style="background:#111820">Sito Vetrina</option>
-                <option value="ecommerce" style="background:#111820">E-Commerce</option>
-                <option value="restyling" style="background:#111820">Restyling</option>
-                <option value="landing" style="background:#111820">Landing Page</option>
-                <option value="automazione" style="background:#111820">Automazione</option>
-                <option value="altro" style="background:#111820">Altro</option>
-              </select>
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label-custom" for="messaggio">Messaggio</label>
-              <textarea id="messaggio" name="messaggio" class="form-input"
-                rows="5" required maxlength="2000"
-                placeholder="Descrivi brevemente il tuo progetto..."></textarea>
-            </div>
-
-            <!-- GDPR: checkbox privacy obbligatoria -->
-            <div class="privacy-check-wrap">
-              <input type="checkbox" id="privacy-consent" name="privacy" required/>
-              <label for="privacy-consent">
-                Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a>.
-                Acconsento al trattamento dei miei dati personali per ricevere una risposta alla mia richiesta.*
-              </label>
-            </div>
-
-            <button type="submit" class="btn-accent w-100">
-              <i class="fa-solid fa-paper-plane me-2" aria-hidden="true"></i>Invia messaggio
-            </button>
-
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- ═══════════════════════════════════════
      FOOTER
-     Link privacy policy + social
+     Solo copyright e link torna al sito
 ═══════════════════════════════════════ -->
 <footer>
   <div class="container">
@@ -643,113 +320,17 @@
         <span class="footer-brand">vivi<span>coding</span></span>
       </div>
       <div class="col-md-4 text-center mb-2 mb-md-0">
-        <p class="footer-copy">© 2026 Simone Scognamiglio ·
-          <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7">Privacy Policy</a>
-        </p>
+        <p class="footer-copy">© 2026 Simone Scognamiglio · Sviluppatore Web Freelance · Roma</p>
       </div>
       <div class="col-md-4 text-center text-md-end">
-        <a href="https://github.com/SimonScognac23" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/simone-scognamiglio-7758172a0" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/vivi_coding" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@scognac" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <!-- Icona casa: torna all'homepage -->
+        <a href="index.html" class="footer-social" aria-label="Torna al sito">
+          <i class="fa-solid fa-house"></i>
+        </a>
       </div>
     </div>
   </div>
 </footer>
-
-<!-- ═══════════════════════════════════════
-     JAVASCRIPT — BOOTSTRAP
-     Libreria esterna per componenti interattivi
-═══════════════════════════════════════ -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  /* ════════════════════════════════════════
-     COOKIE BANNER
-     Salva la scelta nel localStorage
-     Non riappare dopo il primo consenso
-  ════════════════════════════════════════ */
-  const banner = document.getElementById('cookie-banner');
-  if (localStorage.getItem('cookie-consent')) {
-    banner.style.display = 'none';
-  }
-  document.getElementById('cookie-accept').addEventListener('click', () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    banner.style.display = 'none';
-  });
-  document.getElementById('cookie-decline').addEventListener('click', () => {
-    localStorage.setItem('cookie-consent', 'declined');
-    banner.style.display = 'none';
-  });
-
-  /* ════════════════════════════════════════
-     MOBILE MENU
-     Apre/chiude il menu su dispositivi mobili
-     Il controllo null evita crash JS
-  ════════════════════════════════════════ */
-  const toggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (toggle && mobileMenu) {
-    toggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-      toggle.innerHTML = mobileMenu.classList.contains('open')
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-    });
-    mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      });
-    });
-  }
-
-  /* ════════════════════════════════════════
-     TYPEWRITER EFFECT
-     Scrive e cancella le frasi nella hero
-     automaticamente in loop
-  ════════════════════════════════════════ */
-  const phrases = [
-    'Full Stack Developer',
-    'Trasformo le tue idee in realtà',
-    'Siti Web Sicuri & Professionali',
-    'PHP · Laravel · Python',
-    'Il tuo partner digitale a Roma',
-  ];
-  let pi = 0, ci = 0, deleting = false;
-  const el = document.getElementById('typed-text');
-  function type() {
-    const phrase = phrases[pi];
-    el.innerHTML = (deleting ? phrase.slice(0, ci--) : phrase.slice(0, ++ci))
-      + '<span class="typed-cursor">_</span>';
-    if (!deleting && ci === phrase.length) {
-      setTimeout(() => { deleting = true; type(); }, 1800);
-      return;
-    }
-    if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
-    setTimeout(type, deleting ? 45 : 80);
-  }
-  type();
-
-  /* ════════════════════════════════════════
-     SCROLL REVEAL
-     Fa apparire le sezioni con animazione
-     quando l'utente le raggiunge scrollando
-  ════════════════════════════════════════ */
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  /* ════════════════════════════════════════
-     NAVBAR SCROLL
-     Cambia stile della navbar quando
-     l'utente scorre verso il basso
-  ════════════════════════════════════════ */
-  window.addEventListener('scroll', () => {
-    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
-  });
-</script>
 
 </body>
 </html>
