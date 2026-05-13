@@ -197,7 +197,7 @@ section, nav, footer { position: relative; z-index: 1; }
 
 .hero-socials { display: flex; gap: 1.2rem; }
 .hero-socials a {
-  color: #000;
+  color: #999;
   font-size: 1.3rem;
   transition: color .2s, transform .2s;
   text-decoration: none;
